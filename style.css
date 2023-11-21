@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    cursor: none;
+    user-select: none;
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    background-color: #F9F9F9;
+    overflow: hidden;
+}
+
+.dot {
+    position: absolute;
+    background-color: #E24234;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: none;
+}
+
+.ripple {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 5px solid #E24234;
+    opacity: .4;
+    margin: -43px 0 0 -43px;
+    animation: ripple .9s forwards;
+    display: none;
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
